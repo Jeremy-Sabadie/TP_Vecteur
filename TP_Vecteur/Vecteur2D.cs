@@ -4,7 +4,7 @@
     {
         private int X;
         private int Y;
-        private int instanceCount=0;   
+        private int instanceCount = 0;
 
         public Vecteur2D(int x, int y)
         {
@@ -12,20 +12,21 @@
             Console.WriteLine("Donner X:");
             x = int.Parse(Console.ReadLine());
             X = x;
+            Console.WriteLine("Donner Y:");
             y = int.Parse(Console.ReadLine());
             Y = y;
             Console.WriteLine($"X={X} Y={Y}");
-            Console.WriteLine($"La norme est:{Norme}");
-            instanceCount++
+            Console.WriteLine($"La norme est:{Norme()}");
+            instanceCount++;
         }
 
         public int X1 { get => X; set => X = value; }
         public int Y1 { get => Y; set => Y = value; }
-        public double Norme(int x, int y)
+        public double Norme()
         {
 
             return Math.Sqrt(Math.Pow(0 - X, 2) + Math.Pow(0 - Y, 2));
         }
-        
+
     }
 }
