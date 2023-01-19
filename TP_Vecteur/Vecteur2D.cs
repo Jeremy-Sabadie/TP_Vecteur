@@ -15,6 +15,7 @@
         public int Y1 { get => Y; set => Y = value; }
         public double Norme(int x, int y)
         {
+
             return Math.Sqrt(Math.Pow(0 - X, 2) + Math.Pow(0 - Y, 2));
         }
     }
