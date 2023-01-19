@@ -1,15 +1,16 @@
 ﻿namespace TP_Vecteur
 {
     internal class Vecteur2D
-    {
+    {//Attribut de classe qui comptera le nombre d'instances.
         protected static int instanceCount = 0;
 
         private int X;
         private int Y;
         private int IdVecteur;
         public Vecteur2D(int x, int y)
-        {
+        {//Récupération des valeurs pour la création d'un vecteur 2D:
             Console.WriteLine("****Vecteur2D****");
+            //Incrémentation du compteur lors de la création d'un vecrteur 2D:
             instanceCount++;
             IdVecteur = instanceCount;
             Console.WriteLine($"Vecteur {instanceCount}");
@@ -19,6 +20,7 @@
             Console.Write(" Donner Y: ");
             y = int.Parse(Console.ReadLine());
             Y = y;
+            //Affichage:
             Console.WriteLine($"X={X} Y={Y}");
             Console.WriteLine($"La norme est: {Norme()}");
 
