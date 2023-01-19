@@ -2,22 +2,27 @@
 {
     internal class Vecteur2D
     {
+        protected static int instanceCount = 0;
+
         private int X;
         private int Y;
-        private int instanceCount = 0;
-
+        private int IdVecteur;
         public Vecteur2D(int x, int y)
         {
             Console.WriteLine("****Vecteur2D****");
-            Console.WriteLine("Donner X:");
+            instanceCount++;
+            IdVecteur = instanceCount;
+            Console.WriteLine($"Vecteur {instanceCount}");
+            Console.Write(" Donner X: ");
             x = int.Parse(Console.ReadLine());
             X = x;
-            Console.WriteLine("Donner Y:");
+            Console.Write(" Donner Y: ");
             y = int.Parse(Console.ReadLine());
             Y = y;
             Console.WriteLine($"X={X} Y={Y}");
-            Console.WriteLine($"La norme est:{Norme()}");
-            instanceCount++;
+            Console.WriteLine($"La norme est: {Norme()}");
+
+
         }
 
         public int X1 { get => X; set => X = value; }
